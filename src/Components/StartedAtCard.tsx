@@ -10,9 +10,9 @@ export default function StartedAtCard({
   lastUpdated: Date;
 }) {
   return (
-    <Card>
+    <View className="bg-card w-1/3 rounded-2xl m-1 p-2 ">
       <View className="flex flex-row justify-center items-center p-1 space-x-1">
-        <Icons.Clock />
+   
         <Text className="text-white font-Bold">Started At</Text>
       </View>
       <View className="flex flex-col justify-center items-center p-1">
@@ -23,6 +23,7 @@ export default function StartedAtCard({
           moment(lastUpdated).format("D/M/yyyy")
         }</Text>
       </View>
-    </Card>
+      </View>
+    
   );
 }

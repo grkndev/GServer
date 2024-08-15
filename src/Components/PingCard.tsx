@@ -5,16 +5,15 @@ import Card from "./Card";
 
 export default function PingCard({ ping = 1 }: { ping: number }) {
   return (
-    <Card>
+    <View className="bg-card w-1/3 rounded-2xl m-1 p-2">
       <View className="flex flex-row justify-center items-center p-1 space-x-1">
-        <Icons.Signal />
         <Text className="text-white font-Bold">Ping</Text>
       </View>
       <View className="flex flex-row justify-center items-center p-1 space-x-1">
         <StatusCircle pingStatus={pingStatus(ping)} />
         <Text className={`font-Regular ${pingColor(ping)}`}>{ping}ms</Text>
       </View>
-    </Card>
+    </View>
   );
 }
 

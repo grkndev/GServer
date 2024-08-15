@@ -11,8 +11,8 @@ module.exports = {
         Light: ["Light"],
       },
       colors:{
-        background: '#030303',
-        card: '#0e0e0e',
+        background: '#121212',
+        card: '#1f1f1f',
       }
     },
   },

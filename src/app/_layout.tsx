@@ -11,6 +11,8 @@ import {
 
 import * as SplashScreen from "expo-splash-screen";
 import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
 
 // SplashScreen.preventAutoHideAsync();
 const RootLayout = () => {
@@ -33,16 +35,21 @@ const RootLayout = () => {
 
   if (!appReady) {
     return (
-      <View className="bg-background flex-1">
+      <View className="bg-background flex-1 justify-center items-center">
         <Text className="text-white m-10">Fonts Loading...</Text>
       </View>
     );
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-    </Stack>
+    
+      // <StatusBar style="light" backgroundColor="#030303" />
+      <Stack initialRouteName="index" screenOptions={{headerShown:false}}>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="addbot" options={{ headerShown: false }} />
+        <Stack.Screen name="bot" options={{ headerShown: false }} />
+      </Stack>
+    
   );
 };
 

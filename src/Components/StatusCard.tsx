@@ -5,9 +5,8 @@ import Card from "./Card";
 type Status = "online" | "dnd" | "idle" | "offline";
 export default function StatusCard({ status = "online" }: { status: Status }) {
   return (
-    <Card>
+    <View className="bg-card rounded-2xl w-1/3 m-1 p-2">
       <View className="flex flex-row justify-center items-center p-1 space-x-1">
-        <Icons.Info />
         <Text className="text-white font-Bold">Status</Text>
       </View>
       <View className="flex flex-row justify-center items-center p-1 space-x-1">
@@ -16,7 +15,7 @@ export default function StatusCard({ status = "online" }: { status: Status }) {
           {status.charAt(0).toUpperCase() + status.slice(1)}
         </Text>
       </View>
-    </Card>
+    </View>
   );
 }
 

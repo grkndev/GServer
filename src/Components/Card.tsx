@@ -14,9 +14,7 @@ export default function Card({
 }) {
   return (
     <View
-      className={`bg-card ${width ? width : "w-[30vw]"} ${
-        height ? height : "h-[80px]"
-      } rounded-2xl flex justify-center items-center m-1 ${className}`}
+      className={`flex justify-center items-center bg-card p-4 rounded-2xl m-1 ${className}`}
     >
       {children}
     </View>

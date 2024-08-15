@@ -10,7 +10,7 @@ export default function LoginedCard({
   return (
     <Card>
       <View className="flex flex-row justify-center items-center p-1 space-x-1">
-        <Icons.Person />
+      
         <Text className="text-white font-Bold">Logined</Text>
       </View>
       <View className="flex flex-row justify-center items-center p-1 space-x-1">
